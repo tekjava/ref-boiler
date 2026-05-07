@@ -18,6 +18,13 @@ export interface Referral {
   email: string;
 }
 
+export interface CommissionLead {
+  id: number;
+  uid: string;
+  email: string;
+  customer_id: string | null;
+}
+
 export interface Commission {
   id: number;
   created_at: string;
@@ -25,6 +32,7 @@ export interface Commission {
   currency: string;
   status: string;
   referral_id: number;
+  lead?: CommissionLead;
 }
 
 export interface Payout {
